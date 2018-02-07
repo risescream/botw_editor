@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C6F49EE-8BE1-4791-98A9-62FD196B717E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>botw_editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.0.0.9</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>botw_editor</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionType.cs" />
+    <Compile Include="ActionMode.cs" />
+    <Compile Include="actiondata.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="BList`1.cs" />
+    <Compile Include="Bonus.cs" />
+    <Compile Include="CapturedPosition.cs" />
+    <Compile Include="FrmMain.cs" />
+    <Compile Include="globalKeyboardHook.cs" />
+    <Compile Include="KeyEventHelper.cs" />
+    <Compile Include="itemdata.cs" />
+    <Compile Include="itemname.cs" />
+    <Compile Include="MemAPI.cs" />
+    <Compile Include="MemoryChange.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="QueueItemCode.cs" />
+    <Compile Include="QueueItem.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="WinAPI.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmMain.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
